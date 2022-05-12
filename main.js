@@ -6,13 +6,27 @@
 
 const container = document.getElementById("container");
 
-const number = [];
+const arrayNumber = [];
+let count = 0;
+let number;
 
 for ( let i = 0; i < 5; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
+
+    const squareNumber = document.createElement("p");
+    squareNumber.classList.add("number");
+    
+    while (arrayNumber.length <= count) {
+        number = Math.floor(Math.random() * 100) + 1;
+        if (!arrayNumber.includes(number)) {
+            arrayNumber.push(number);
+        }
+    }
+
     container.append(square);
-    // let randomNumber = Math.floor(Math.random() * 100) +1;
-    // while (!number.includes(randomNumber)){
-    //     number.push(randomNumber);
+    square.append(squareNumber)
+    squareNumber.append(arrayNumber[count]);
+
+    count++;
 }
