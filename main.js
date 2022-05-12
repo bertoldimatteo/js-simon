@@ -29,7 +29,21 @@ for ( let i = 0; i < 5; i++) {
     square.append(squareNumber)
     squareNumber.append(arrayNumber[count]);
 
-    count++;
+    count++;  
+}
+
+function userInput() {
+    while (userNumber.length < 5) {
+        const userInput = Number(prompt("Digita un numero di quelli appena visualizzati"));
+        if ( isNaN(userInput) ) {
+            alert("Hai sbagliato inserisci un numero!!!");
+        } else {
+            userNumber.push(userInput); 
+        }        
+    } 
+    for ( let i = 0; i < userNumber.length; i++){
+        console.log(userNumber[i]);
+    }
 }
 
 setTimeout(function() {
@@ -39,18 +53,17 @@ setTimeout(function() {
     }
 }, 5000);
 
-setTimeout(function() {
-    while (userNumber.length < 5) {
-        const userInput = Number(prompt("Digita un numero di quelli appena visualizzati"));
-        if ( isNaN(userInput) ) {
-            alert("Hai sbagliato inserisci un numero!!!");
-        } else {
-            userNumber.push(userInput); 
-        }
-    }          
-}, 5500);
+setTimeout(userInput, 5500);  
 
-console.log(userNumber);
+for ( let i = 0; i < arrayNumber.length; i++){
+    console.log(arrayNumber[i]);
+}
+
+
+
+
+
+
 
 
 
