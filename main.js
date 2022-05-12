@@ -40,18 +40,18 @@ setTimeout(function() {
 }, 5000);
 
 setTimeout(function() {
-    for (let i = 0; i < 5; i++){
+    while (userNumber.length < 5) {
         const userInput = Number(prompt("Digita un numero di quelli appena visualizzati"));
-
-        while (userNumber.length < 5){
-        if ( isNaN(userInput)) {
+        if ( isNaN(userInput) ) {
             alert("Hai sbagliato inserisci un numero!!!");
-            usern.pop(userInput);
+        } else {
+            userNumber.push(userInput); 
         }
-        userNumber.push(userInput);
-        } 
     }          
 }, 5500);
 
 console.log(userNumber);
+
+
+
 
