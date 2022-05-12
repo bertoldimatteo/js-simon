@@ -40,8 +40,8 @@ function userInput() {
         } else {
             userNumber.push(userInput); 
         }        
-    } 
-    for ( let i = 0; i < userNumber.length; i++){
+    }
+    for ( let i = 0; i < userNumber; i++) {
         console.log(userNumber[i]);
     }
 }
@@ -54,10 +54,6 @@ setTimeout(function() {
 }, 5000);
 
 setTimeout(userInput, 5500);  
-
-for ( let i = 0; i < arrayNumber.length; i++){
-    console.log(arrayNumber[i]);
-}
 
 
 
