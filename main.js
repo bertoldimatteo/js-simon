@@ -10,6 +10,7 @@ const arrayNumber = [];
 const userNumber = [];
 let count = 0;
 let number;
+let discoverNumber = 0;
 
 for ( let i = 0; i < 5; i++) {
     const square = document.createElement("div");
@@ -41,9 +42,20 @@ function userInput() {
             userNumber.push(userInput); 
         }        
     }
-    for ( let i = 0; i < userNumber; i++) {
-        console.log(userNumber[i]);
+
+    for ( let i = 0; i < arrayNumber.length; i++){
+        console.log(arrayNumber[i])
+    
+        for ( let j = 0; j < userNumber.length; j++){
+            console.log(userNumber[j])
+            if ( arrayNumber[i] == userNumber[j] ){
+                discoverNumber += 1;
+            }
+        }
     }
+
+alert(`Ti sei ricordato ${discoverNumber} numeri`);
+
 }
 
 setTimeout(function() {
