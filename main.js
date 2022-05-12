@@ -30,3 +30,10 @@ for ( let i = 0; i < 5; i++) {
 
     count++;
 }
+
+setTimeout(function() {
+    const number = document.querySelectorAll(".number");
+    for ( const numb of number) {
+        numb.classList.add("hide");
+    }
+}, 5000);

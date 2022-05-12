@@ -1,4 +1,4 @@
-#container {
+.container {
     max-width: 1080px;
     margin: auto;
     display: flex;
@@ -16,4 +16,7 @@
 }
 .number {
     font-size: 30px;
+}
+.hide{
+    display: none;
 }
