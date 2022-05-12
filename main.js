@@ -34,25 +34,24 @@ for ( let i = 0; i < 5; i++) {
 }
 
 function userInput() {
+    let userNum;
     while (userNumber.length < 5) {
-        const userInput = Number(prompt("Digita un numero di quelli appena visualizzati"));
-        if ( isNaN(userInput) ) {
+        userNum = Number(prompt("Digita un numero di quelli appena visualizzati"));
+        if ( isNaN(userNum) ) {
             alert("Hai sbagliato inserisci un numero!!!");
         } else {
-            userNumber.push(userInput); 
+            userNumber.push(userNum); 
         }        
     }
 
     for ( let i = 0; i < arrayNumber.length; i++){
-        console.log(arrayNumber[i])
-    
         for ( let j = 0; j < userNumber.length; j++){
-            console.log(userNumber[j])
             if ( arrayNumber[i] == userNumber[j] ){
                 discoverNumber += 1;
             }
         }
     }
+
 
 alert(`Ti sei ricordato ${discoverNumber} numeri`);
 
