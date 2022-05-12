@@ -7,6 +7,7 @@
 const container = document.getElementById("container");
 
 const arrayNumber = [];
+const userNumber = [];
 let count = 0;
 let number;
 
@@ -37,3 +38,16 @@ setTimeout(function() {
         numb.classList.add("hide");
     }
 }, 5000);
+
+setTimeout(function() {
+    for (let i = 0; i < 5; i++){
+        const userInput = Number(prompt("Digita un numero di quelli appena visualizzati"));
+        if ( isNaN(userInput)) {
+            alert("Hai sbagliato inserisci un numero!!!");
+        }
+        userNumber.push(userInput);
+    }
+}, 5500);
+
+console.log(userNumber);
+
