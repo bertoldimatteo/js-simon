@@ -46,15 +46,18 @@ function userInput() {
     }
 
     for ( let i = 0; i < arrayNumber.length; i++){
-        for ( let j = 0; j < userNumber.length; j++){
+/*         for ( let j = 0; j < userNumber.length; j++){
             if ( arrayNumber[i] == userNumber[j] ){
                 discoverNumber += 1;
             }
+        } */
+        if(userNumber.includes(arrayNumber[i])) {
+            checkNumber.push(arrayNumber[i]);
         }
     }
 
 
-alert(`Ti sei ricordato ${discoverNumber} numeri`);
+alert(`Ti sei ricordato ${checkNumber.length} numeri (${checkNumber})`);
 
 }
 
@@ -63,9 +66,9 @@ setTimeout(function() {
     for ( const numb of number) {
         numb.classList.add("hide");
     }
-}, 5000);
+}, 4000);
 
-setTimeout(userInput, 5500);  
+setTimeout(userInput, 4500);  
 
 
 
