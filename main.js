@@ -11,7 +11,6 @@ const userNumber = [];
 const checkNumber = [];
 let count = 0;
 let number;
-let discoverNumber = 0;
 
 for ( let i = 0; i < 5; i++) {
     const square = document.createElement("div");
