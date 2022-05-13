@@ -8,6 +8,7 @@ const container = document.getElementById("container");
 
 const arrayNumber = [];
 const userNumber = [];
+const checkNumber = [];
 let count = 0;
 let number;
 let discoverNumber = 0;
